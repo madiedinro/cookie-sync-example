@@ -1,8 +1,13 @@
 # Band service skeleton
 
+
+git remote add origin https://github.com/madiedinro/cookie-sync-example.git
+git push -u origin master
+
+
 ## Hot to start
 
-For testing purposes run `make start-dev`. 
+For testing purposes run `make start-dev`.
 To start service in production mode use Rockstat dashboard located at `app.YOUR-TRACKING-DOMAIN`
 
 ### Structure
@@ -35,18 +40,18 @@ Moreover you can define function as woker which load initial data or packet hanl
 
 ### Build your service
 
-Look at the `yourservice/yourservice/main.py` template. It contains typical example 
+Look at the `yourservice/yourservice/main.py` template. It contains typical example
 
 ### Running for debug
 
-execute 
+execute
 ```
 make start-dev
 ```
 
 ### Env variables
 
-Possible to store vars at: `.env`, `.env.local`. 
+Possible to store vars at: `.env`, `.env.local`.
 These paths was excluded from git to avoid of commit sensitive data.
 
 ### Old skeleton example
@@ -90,7 +95,7 @@ async def tick(data, **params):
 @worker()
 async def service_worker():
     """
-    Это каркас воркера, который используется для начально 
+    Это каркас воркера, который используется для начально
     загрузки/подготовки данных и последующей оброботки новых данных
     вызывается при инициализации приложения
     """
